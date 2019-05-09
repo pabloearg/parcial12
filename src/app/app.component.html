@@ -32,7 +32,14 @@
 <section class="widget clearfix" >
     <h4 class="widgettitle">Buscar</h4>
       <div>
-        <app-buscar-producto></app-buscar-producto>
+        <app-buscar-producto (buscar)="callbackBuscarProducto(producto)"></app-buscar-producto>
+      </div>  
+  </section>
+  <section class="widget clearfix" >
+    <h4 class="widgettitle">Producto: </h4>
+      <div>
+        <!-- Solo se va a mostrar si se devolvio algun producto -->
+        <app-mostrar-producto producto="productoBuscado"></app-mostrar-producto>
       </div>  
   </section>
 <!--<section class="widget clearfix" >

@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   listado: any;
   miProductoServicio: ProductoService;
   eliminarProd: EliminarProductoComponent;
-
+  productoBuscado : any;
   constructor(serviceProducto: ProductoService) {
     this.miProductoServicio = serviceProducto;
 
@@ -30,6 +30,10 @@ export class AppComponent implements OnInit {
       this.listado = data
       console.log(data)
     })
+  }
+
+  callbackBuscarProducto(producto){
+    this.productoBuscado = producto
   }
 
 }

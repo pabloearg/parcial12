@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input} from '@angular/core';
 import { BuscarProductoComponent } from '../buscar-producto/buscar-producto.component';
 
 @Component({
@@ -8,6 +8,9 @@ import { BuscarProductoComponent } from '../buscar-producto/buscar-producto.comp
 })
 export class MostrarProductoComponent implements OnInit {
   buscarProd: BuscarProductoComponent;
+
+  @Input() productoBuscado :any; // este el el producto que busco tu servicio
+
   constructor() { }
 
   ngOnInit() {
